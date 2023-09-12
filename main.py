@@ -41,24 +41,24 @@ def count_batteries_by_health(present_capacities):
 
 def test_bucketing_by_health():
   print("Counting batteries by SoH...\n")
-    present_capacities = [115, 118, 80, 95, 91, 72]
-    # present_capacities2 = [116,210,45,20,60]
-    # count2 = count_batteries_by_health(present_capacities2)
-    counts, h, e, f = count_batteries_by_health(present_capacities)
-    # counts = count_batteries_by_health(present_capacities)
-    # print(count2)
-    print("The number of batteries that are healthy, exchange and failed are:")
-    print(counts)
-    assert(counts["healthy"] == 2)
-    assert(counts["exchange"] == 3)
-    assert(counts["failed"] == 1)
-    for i in h:
-        print("The batteries with present capacity",i, "are healthy")
-    for i in e:
-        print("The batteries with present capacity",i, "are to be exchanged")
-    for i in f:
-        print("The batteries with present capacity",i, "are failed")
-    print("Done counting :)")
+  present_capacities = [115, 118, 80, 95, 91, 72]
+  # present_capacities2 = [116,210,45,20,60]
+  # count2 = count_batteries_by_health(present_capacities2)
+  counts, h, e, f = count_batteries_by_health(present_capacities)
+  # counts = count_batteries_by_health(present_capacities)
+  # print(count2)
+  print("The number of batteries that are healthy, exchange and failed are:")
+  print(counts)
+  assert(counts["healthy"] == 2)
+  assert(counts["exchange"] == 3)
+  assert(counts["failed"] == 1)
+  for i in h:
+      print("The batteries with present capacity",i, "are healthy")
+  for i in e:
+      print("The batteries with present capacity",i, "are to be exchanged")
+  for i in f:
+      print("The batteries with present capacity",i, "are failed")
+  print("Done counting :)")
 
 
 if __name__ == '__main__':
