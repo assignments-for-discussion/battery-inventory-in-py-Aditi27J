@@ -1,4 +1,3 @@
-
 def count_batteries_by_health(present_capacities):
   # Initializing the count variables
   healthy_count = 0
